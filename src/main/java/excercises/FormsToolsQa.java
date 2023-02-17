@@ -39,14 +39,14 @@ public class FormsToolsQa {
         // creating a last name variable to hold the input field  located web element
         WebElement email = driver.findElement(By.id("userEmail"));
         email.sendKeys("akashema@gmail.com");
-//
+
         Thread.sleep(2000);
         // Locate Gender radio button Web element and select Male gender radio button
         WebElement maleRadioBtn = driver.findElement(By.id("gender-radio-1"));
         maleRadioBtn.click();
         System.out.println(maleRadioBtn.isSelected());
 
-//
+
         // creating a mobile Number variable to hold the input field  located web element
         WebElement mobileNumber = driver.findElement(By.id("userNumber"));
         mobileNumber.sendKeys("0736533832");
@@ -55,11 +55,14 @@ public class FormsToolsQa {
         WebElement subject = driver.findElement(By.id("subjectsInput"));
         subject.sendKeys("Hello World !!!!!");
 
+        WebElement sportCheckbox = driver.findElement(By.id("hobbies-checkbox-1"));
+        sportCheckbox.click();
+
         // creating Address variable to hold the input field  located web element
         WebElement address = driver.findElement(By.id("currentAddress"));
         address.sendKeys("67 Beacon Valley Street Cape Town");
 
-////        driver.close();
+        driver.close();
 
 
     }
