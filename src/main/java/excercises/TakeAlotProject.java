@@ -37,6 +37,8 @@ public class TakeAlotProject {
 
         // Find Add Cart Button Web Element
         WebElement addCartBtn = driver.findElement(By.className("add-to-cart-button"));
+
+        // pause website and click addCart button
         try {
             Thread.sleep(5000);
             addCartBtn.click();
@@ -44,8 +46,17 @@ public class TakeAlotProject {
             throw new RuntimeException(e);
         }
 
+        // find cart button Web Element
+        WebElement cartBtn = driver.findElement(By.className("mini-cart-button"));
+        cartBtn.click();
+
+        try {
+            Thread.sleep(5000);
+            driver.close();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
 
-//        driver.close();
     }
 }
